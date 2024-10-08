@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
-  AppBar, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography,
+  AppBar, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, SvgIcon, Toolbar, Typography,
 } from '@mui/material';
 import { withStyles } from '@mui/styles';
 import { ChatBubble, ChevronLeft, ChevronRight, Dashboard, Menu } from '@mui/icons-material';
@@ -117,9 +117,23 @@ class MiniDrawer extends React.Component<MiniDrawerProps> {
             >
               <Menu />
             </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              AI HR Manager
-            </Typography>
+            <Stack
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconButton
+                href='/marketplace'
+              >
+                <SvgIcon>
+                  <ChevronLeft color='secondary' />
+                </SvgIcon>
+              </IconButton>
+              <Typography variant="h6" color="inherit" noWrap>
+                AI HR Manager
+              </Typography>
+            </Stack>
           </Toolbar>
         </AppBar>
         <Drawer

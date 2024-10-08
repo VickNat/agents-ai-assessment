@@ -3,6 +3,7 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
 import { styled } from '@mui/system';
+import Image from 'next/image';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
@@ -21,12 +22,26 @@ const ListingCard = ({ agent }: any) => {
   return (
     <StyledCard>
       {/* Left: Agent Logo */}
-      <CardMedia
-        component="img"
-        sx={{ width: 80, height: 80, borderRadius: '50%' }}
-        image={agent.logo}
-        alt={`${agent.name} logo`}
-      />
+      <Box
+        sx={{
+          width: 100,
+          height: 100,
+          borderRadius: '50%',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Image
+          src={agent.logo}
+          alt={agent.name}
+          style={{
+            height: '100px',
+            width: 'auto'
+          }}
+        />
+      </Box>
 
       {/* Middle: Agent Details */}
       <CardContent sx={{ flex: 1 }}>
@@ -40,7 +55,9 @@ const ListingCard = ({ agent }: any) => {
 
       {/* Right: Button to Agent Details */}
       <Box sx={{ alignSelf: 'flex-end', mt: { xs: 2, sm: 0 } }}>
-        <Button variant="text" color="primary">
+        <Button
+          href={agent.link || '/marketplace'}
+          variant="text" color="primary">
           View Details
         </Button>
       </Box>

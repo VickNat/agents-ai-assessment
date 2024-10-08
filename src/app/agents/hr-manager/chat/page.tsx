@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Box, Stack, TextField, Button, Typography, Paper, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import ReactMarkdown from 'react-markdown';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const ChatPage = () => {
@@ -103,7 +104,13 @@ const ChatPage = () => {
                   borderRadius: '15px',
                 }}
               >
-                <Typography variant="body1">{message.content}</Typography>
+                {message.sender === 'ai' ? (
+                  <Typography variant="body1">
+                    <ReactMarkdown>{message.content}</ReactMarkdown>
+                  </Typography>
+                ) : (
+                  <Typography variant="body1">{message.content}</Typography>
+                )}
               </Paper>
             </Box>
           ))}

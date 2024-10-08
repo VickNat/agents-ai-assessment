@@ -52,7 +52,9 @@ const HeroSection = () => {
           Marketplace
         </Typography>
         <Typography variant={"body1"}>Buy and sell items on the marketplace</Typography>
-        <Button size='large' variant={"contained"}>Explore more</Button>
+        <Button size='large'
+        href='/marketplace'
+        variant={"contained"}>Explore more</Button>
       </Stack>
 
       {/* Image side */}

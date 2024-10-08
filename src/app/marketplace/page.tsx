@@ -5,28 +5,31 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ListingCard from '@/components/marketplace/ListingCard';
 import Header from '@/components/common/Header';
+import salespersonAgent from '@/../public/assets/istockphoto-1758688771-612x612.png'
+import cofounderAgent from '@/../public/assets/woman-7607337_640.png'
+import hrManagerAgent from '@/../public/assets/ai-generated-8799908_640.png'
 
 const values: any[] = [
   {
     name: "AI Salesperson",
     description: "Dashboards for lead generation, pipeline analysis, sales forecasts, and customer interaction metrics.",
-    logo: "https://via.placeholder.com/80",
+    logo: salespersonAgent,
     category: ["business", "featured"],
-    link: "/"
+    link: "/agents/salesperson/dashboard"
   },
   {
     name: "AI Co-founder",
     description: "Dashboards showing business metrics, strategy recommendations, financial data visualization, and a feed of key insights.",
-    logo: "https://via.placeholder.com/80",
+    logo: cofounderAgent, // Replace with an actual image URL
     category: ["business", "featured"],
-    link: "/"
+    link: "/agents/co-founder/dashboard"
   },
   {
     name: "AI HR Manager",
     description: "Dashboards for employee performance, recruitment analytics, and engagement metrics.",
-    logo: "https://via.placeholder.com/80",
+    logo: hrManagerAgent,
     category: ["business", "productivity"],
-    link: "/"
+    link: "/agents/hr-manager/dashboard"
   },
 ]
 
@@ -92,7 +95,7 @@ const page = () => {
         >
           <Typography variant={"h1"} color='textPrimary' textAlign={"center"}>AGENTS</Typography>
           <Typography variant={"body1"} textAlign={"center"} color='textSecondary'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias neque assumenda voluptas consequuntur officia tempore expedita suscipit hic asperiores quas.
+            Discover and install AI agents to help you with business, productivity, and entertainment tasks in your daily life.
           </Typography>
         </Stack>
 

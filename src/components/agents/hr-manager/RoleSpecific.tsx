@@ -60,7 +60,7 @@ const RoleSpecific = () => {
           <Grid item xs={12} md={6}>
             <Paper sx={{ p: 3 }}>
               <Typography variant="h6">Top Performers</Typography>
-              <RadialBarChart width={300} height={250} cx={150} cy={125} innerRadius={20} outerRadius={140} barSize={10} data={performanceData}>
+              <RadialBarChart width={300} height={250} cx={150} cy={125} innerRadius={20} outerRadius={120} barSize={15} data={performanceData}>
                 <RadialBar label={{ position: 'insideStart', fill: '#fff' }} background dataKey="performance" />
                 <Legend iconSize={10} layout="horizontal" align="center" verticalAlign="bottom" />
                 <Tooltip />

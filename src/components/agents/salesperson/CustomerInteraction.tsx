@@ -100,7 +100,7 @@ const CustomerInteraction = () => {
               Customer Satisfaction Breakdown
             </Typography>
             <ResponsiveContainer width="100%" height={300}>
-              <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="90%" barSize={10} data={satisfactionData}>
+              <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="90%" barSize={20} data={satisfactionData}>
                 <RadialBar label={{ position: 'insideStart', fill: '#fff' }} background dataKey="value" />
                 <Legend iconSize={10} layout="vertical" verticalAlign="middle" align="right" />
               </RadialBarChart>
